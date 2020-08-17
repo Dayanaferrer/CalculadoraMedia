@@ -20,8 +20,7 @@ const input5 = input.question ('valor cinco')
 const input6 = input.question ('valor seis')
 
 const total = parseInt(input1) + parseInt(input2)+parseInt(input3)+parseInt(input4)+parseInt(input5)+parseInt(input6)
-
 console.log(total.toFixed(2));
 
-
-  
+const mediaFinal = total/6 
+ console.log(mediaFinal.toFixed(2))
