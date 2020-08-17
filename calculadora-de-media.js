@@ -1,4 +1,4 @@
-const input = require("readline-sync");
+const notas = require("readline-sync");
 
 /* [S2] Exercício {reprograma}
 
@@ -12,15 +12,28 @@ Para ser aprovada a média tem que ser maior ou igual 7;
 Para ser reprovada a média tem que ser menor que 5;
 Para ir para recuperação a média tem que ser maior ou igual a 5 e menor que 7; */
 
-const input1 = input.question ('valor um')
-const input2 = input.question ('valor dois')
-const input3 = input.question ('valor tres')
-const input4 = input.question ('valor quatro')
-const input5 = input.question ('valor cinco')
-const input6 = input.question ('valor seis')
+console.log ('>>>>>>Entre com o valor das notas<<<<<< ')
+const nota1 = notas.question ('----Informe a Primeira Nota----: ')
+const nota2 = notas.question ('----Informe a Segunda Nota----: ')
+const nota3 = notas.question ('----Informe a Terceira Nota----: ')
+const nota4 = notas.question ('----Informe a Quarta Nota----: ')
+const nota5 = notas.question ('----Informe a Quinta Nota----: ')
+const nota6 = notas.question ('----Informe a Sexta Nota----: ')
 
-const total = parseInt(input1) + parseInt(input2)+parseInt(input3)+parseInt(input4)+parseInt(input5)+parseInt(input6)
-console.log(total.toFixed(2));
+const total = parseInt(nota1) + parseInt(nota2)+parseInt(nota3)+parseInt(nota4)+parseInt(nota5)+parseInt(nota6)
+console.log ('---- Soma das médias ----:  ' + total.toFixed(2))
 
 const mediaFinal = total/6 
- console.log(mediaFinal.toFixed(2))
+ console.log( '----Valor da Média Final ----:  ' + mediaFinal.toFixed(2))
+
+if(mediaFinal >= 5 && mediaFinal < 7 ){
+    console.log ('==== Recuperação! ====')
+} else if (mediaFinal >= 7){
+    console.log ('==== Aprovada! ====')
+} else {
+    console.log ('==== Está Reprovada! ====')
+}
+
+
+
+
